@@ -41,5 +41,11 @@ module.exports = {
                 ],
             }
         ]
+    },
+    resolve: {
+        extensions: ['.js', '.json', '.jsx'], // 解析扩展。（当我们通过路导入文件，找不到改文件时，会尝试加入这些后缀继续寻找文件）
+        alias: {
+            '@': path.join(__dirname, '..', "src") // 在项目中使用@符号代替src路径，导入文件路径更方便
+        }
     }
 }
